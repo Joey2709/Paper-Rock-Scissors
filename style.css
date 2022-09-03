@@ -1,0 +1,146 @@
+* {
+  font-family: "Shadows Into Light";
+  letter-spacing: 3px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f5ebeb;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#player-image {
+  transform: scaleX(-1);
+}
+
+.player,
+.computer,
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.computer {
+  width: 40%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.vs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+}
+
+.vs img {
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+img {
+  object-fit: cover;
+  height: 50%;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.round {
+  display: flex;
+}
+
+.reload {
+  display: none;
+}
+
+/*buttons*/
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+  height: 10%;
+  gap: 15px;
+}
+
+button {
+  width: 25%;
+  height: 50px;
+  border-radius: 5px;
+  color: var(--color);
+  --color: #ff1361;
+  --hover: #231557;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  user-select: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+button:hover,
+button:focus {
+  border-color: var(--hover);
+  -webkit-animation: pulse 1s;
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+button:active {
+  border-color: #eee;
+}
